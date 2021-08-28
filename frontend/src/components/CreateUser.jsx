@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 const CreateUser = () => {
   const [username, setUsername] = useState('')
@@ -12,7 +13,11 @@ const CreateUser = () => {
     const newUser = { username }
     setUsername('')
     console.log(newUser)
-    // window.location = '/'
+
+    axios
+      .post('http://localhost:5000/users/add', newUser)
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err))
   }
 
   return (
