@@ -3,18 +3,26 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav>
-      <Link to='/'>Exercise Tracker</Link>
+    <nav className='text-gray-800'>
+      <Link to='/' className='text-3xl font-body'>
+        Exercise Tracker
+      </Link>
       <div>
         <ul>
           <li>
-            <Link to='/'>Exercises</Link>
+            <Link to='/' className='uppercase'>
+              Exercises
+            </Link>
           </li>
           <li>
-            <Link to='/create'>Create Exercise</Link>
+            <Link to='/create' className='uppercase'>
+              Create Exercise
+            </Link>
           </li>
           <li>
-            <Link to='/user'>Create User</Link>
+            <Link to='/user' className='uppercase'>
+              Create User
+            </Link>
           </li>
         </ul>
       </div>

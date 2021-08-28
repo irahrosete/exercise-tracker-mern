@@ -46,7 +46,7 @@ const CreateExercise = () => {
 
   return (
     <>
-      <h3>Create New Exercise</h3>
+      <h3 className='text-xl'>Create New Exercise</h3>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor='username'>Username: </label>
@@ -67,20 +67,22 @@ const CreateExercise = () => {
           </select>
         </div>
         <div>
-          <label>Description: </label>
+          <label htmlFor='description'>Description: </label>
           <input
             type='text'
             name='description'
+            id='description'
             required
             value={exercise.description}
             onChange={handleChange}
           />
         </div>
         <div>
-          <label>Duration (in minutes): </label>
+          <label htmlFor='duration'>Duration (in minutes): </label>
           <input
             type='text'
             name='duration'
+            id='duration'
             required
             value={exercise.duration}
             onChange={handleChange}
