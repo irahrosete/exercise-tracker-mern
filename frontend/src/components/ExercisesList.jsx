@@ -18,11 +18,13 @@ const ExercisesList = () => {
   }, [])
 
   const deleteExercise = (id) => {
-    axios
-      .delete(`http://localhost:5000/exercises/${id}`)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err))
-    setExercises(exercises.filter((exercise) => exercise._id !== id))
+    if (window.confirm('Are you sure you want to delete?')) {
+      axios
+        .delete(`http://localhost:5000/exercises/${id}`)
+        .then((res) => console.log(res.data))
+        .catch((err) => console.log(err))
+      setExercises(exercises.filter((exercise) => exercise._id !== id))
+    }
   }
 
   return (
@@ -32,8 +34,9 @@ const ExercisesList = () => {
         const { _id, username, description, duration, date } = exercise
         return (
           <div key={_id}>
+            <h4>{date.substring(0, 10)}</h4>
             <h5>
-              {description} for {duration} min on {date.substring(0, 10)}
+              {description} for {duration} min
             </h5>
             <p>by {username}</p>
             <button>
