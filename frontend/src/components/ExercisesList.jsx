@@ -27,7 +27,7 @@ const ExercisesList = () => {
 
   return (
     <div>
-      <h3>Exercises List</h3>
+      <h3 className='text-xl'>Exercises List</h3>
       {exercises.map((exercise) => {
         const { _id, username, description, duration, date } = exercise
         return (

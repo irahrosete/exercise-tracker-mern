@@ -22,7 +22,7 @@ const CreateUser = () => {
 
   return (
     <div>
-      <h3>Create User</h3>
+      <h3 className='text-xl'>Create User</h3>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor='username'>Username: </label>
