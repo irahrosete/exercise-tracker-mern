@@ -19,7 +19,7 @@ const ExercisesList = () => {
 
   const deleteExercise = (id) => {
     axios
-      .delete(`http://localhost:5000/${id}`)
+      .delete(`http://localhost:5000/exercises/${id}`)
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err))
     setExercises(exercises.filter((exercise) => exercise._id !== id))
@@ -39,7 +39,7 @@ const ExercisesList = () => {
             <button>
               <Link to={`/edit/${_id}`}>edit</Link>
             </button>
-            <button onClick={(_id) => deleteExercise(_id)}>delete</button>
+            <button onClick={() => deleteExercise(_id)}>delete</button>
           </div>
         )
       })}
