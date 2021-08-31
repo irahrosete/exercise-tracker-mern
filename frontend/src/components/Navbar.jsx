@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className='text-gray-800'>
+    <nav className='text-gray-800 mb-5'>
       <Link to='/' className='text-3xl font-body'>
         Exercise Tracker
       </Link>

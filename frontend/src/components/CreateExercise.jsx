@@ -62,8 +62,11 @@ const CreateExercise = () => {
       <h3 className='text-xl'>Create New Exercise</h3>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor='username'>Username: </label>
+          <label className='block' htmlFor='username'>
+            Username:{' '}
+          </label>
           <select
+            className='rounded'
             name='username'
             id='username'
             required
@@ -80,8 +83,11 @@ const CreateExercise = () => {
           </select>
         </div>
         <div>
-          <label htmlFor='description'>Description: </label>
+          <label className='block' htmlFor='description'>
+            Description:{' '}
+          </label>
           <input
+            className='rounded'
             type='text'
             name='description'
             id='description'
@@ -91,8 +97,11 @@ const CreateExercise = () => {
           />
         </div>
         <div>
-          <label htmlFor='duration'>Duration (in minutes): </label>
+          <label className='block' htmlFor='duration'>
+            Duration (in minutes):{' '}
+          </label>
           <input
+            className='rounded'
             type='text'
             name='duration'
             id='duration'
@@ -102,9 +111,13 @@ const CreateExercise = () => {
           />
         </div>
         <div>
-          <label>Date: </label>
+          <label className='block'>Date: </label>
           <div>
-            <DatePicker selected={date} onChange={handleDateChange} />
+            <DatePicker
+              className='rounded'
+              selected={date}
+              onChange={handleDateChange}
+            />
           </div>
         </div>
         <div>

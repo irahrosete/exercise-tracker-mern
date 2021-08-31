@@ -9,13 +9,15 @@ import CreateUser from './components/CreateUser'
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Route path='/' exact component={ExercisesList} />
-      <Route path='/edit/:id' component={EditExercise} />
-      <Route path='/create' component={CreateExercise} />
-      <Route path='/user' component={CreateUser} />
-    </Router>
+    <div className='m-5'>
+      <Router>
+        <Navbar />
+        <Route path='/' exact component={ExercisesList} />
+        <Route path='/edit/:id' component={EditExercise} />
+        <Route path='/create' component={CreateExercise} />
+        <Route path='/user' component={CreateUser} />
+      </Router>
+    </div>
   )
 }
 

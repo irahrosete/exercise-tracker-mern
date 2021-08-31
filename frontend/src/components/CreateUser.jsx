@@ -25,8 +25,11 @@ const CreateUser = () => {
       <h3 className='text-xl'>Create User</h3>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor='username'>Username: </label>
+          <label className='block' htmlFor='username'>
+            Username:{' '}
+          </label>
           <input
+            className='rounded'
             type='text'
             name='username'
             id='username'
