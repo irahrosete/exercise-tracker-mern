@@ -60,7 +60,7 @@ const CreateExercise = () => {
   return (
     <>
       <h3 className='text-xl'>Create New Exercise</h3>
-      <form onSubmit={handleSubmit}>
+      <form className='mt-3' onSubmit={handleSubmit}>
         <div>
           <label className='block' htmlFor='username'>
             Username:{' '}
@@ -121,7 +121,7 @@ const CreateExercise = () => {
           </div>
         </div>
         <div>
-          <button>Submit</button>
+          <button className='btn'>Submit</button>
         </div>
       </form>
     </>

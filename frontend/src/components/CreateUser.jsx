@@ -23,7 +23,7 @@ const CreateUser = () => {
   return (
     <div>
       <h3 className='text-xl'>Create User</h3>
-      <form onSubmit={handleSubmit}>
+      <form className='mt-3' onSubmit={handleSubmit}>
         <div>
           <label className='block' htmlFor='username'>
             Username:{' '}
@@ -39,7 +39,7 @@ const CreateUser = () => {
           />
         </div>
         <div>
-          <button>Create</button>
+          <button className='btn'>Create</button>
         </div>
       </form>
     </div>
